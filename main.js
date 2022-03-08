@@ -104,7 +104,7 @@ function SelectDrink(drink, price,count,child) {
 }
 
 
-const BuyingDone = () => {
+function BuyingDone() {
   alert(`구입 내역 : 콜라 ${cokeCount}개 / 물 ${waterCount}개 / 커피 ${coffeeCount}개`);
 
   cokeCount = 0;
@@ -129,7 +129,7 @@ const BuyingDone = () => {
 }
 
 
-const PrintInput = () => {
+function PrintInput(){
   if (isNaN( parseInt(cashInput.value) )) {
     alert("다시 입력해주세요!");
   } else if (parseInt(cashInput.value) >= 50000) {
