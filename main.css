@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 li {
@@ -8,22 +10,26 @@ li {
   text-decoration: none;
 }
 
+p {
+  margin-top: 10px;
+}
+
 h1 {
   text-align: center;
-  color: teal;
+  font-weight: 700;
+  color: rgb(91, 90, 167);
   margin: 20px 0;
 }
 
 ul.drink-menu {
   display: flex;
   justify-content: space-between;
-  margin: 15px 30px;
+  margin: 15px 40px 40px;
 }
 
 ul.drink-menu > li {
   width: 150px;
   height: 130px;
-  background-color: pink;
   border-radius: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -48,16 +54,21 @@ section.pay > div.pay-list {
   display: flex;
 }
 section.pay > div.pay-list > div {
-  background-color: teal;
+  box-sizing: border-box;
+  background-color: rgba(165, 186, 223, 0.7);
   width: 50%;
   height: 40px;
   margin: 20px 20px;
+  padding-top: 10px;
   border-radius: 20px;
   text-align: center;
 }
 
 section.pay-cash {
   display: none;
+}
+section.pay-cash > input {
+  margin-top: 15px;
 }
 
 section.pay-card {
@@ -80,7 +91,7 @@ section.buy-list > div:first-child {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 4px 10px;
+  padding: 6px 15px;
   width: 40%;
   font-size: 18px;
   font-weight: bold;
@@ -90,6 +101,7 @@ section.buy-list > div:first-child {
 }
 section.buy-list > div:first-child > ul > li {
   text-align: right;
+  line-height: 22px;
 }
 section.buy-list #changeBtn {
   border: none;
