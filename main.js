@@ -132,7 +132,8 @@ const BuyingDone = () => {
 const PrintInput = () => {
   if (isNaN( parseInt(cashInput.value) )) {
     alert("다시 입력해주세요!");
-    cashInput.value="";
+  } else if (parseInt(cashInput.value) >= 50000) {
+    alert("너무 많은 금액입니다.");
   } else {
     money += parseInt(cashInput.value);
 
@@ -141,15 +142,14 @@ const PrintInput = () => {
       let payBack = money % 100;
       money = money - payBack;
       alert(`돌려드린 금액 : ${payBack}원 / 넣으신 금액 : ${money}원`);
-      cashInput.value="";
     } else {
       alert("넣으신 금액 : " + money);
-      cashInput.value="";
     }
+    
     change.innerHTML = `잔액 : ${money}원`;
     sectionSelectDrink.style.display ="block";
   }
-
+  cashInput.value="";
   
 }
 
